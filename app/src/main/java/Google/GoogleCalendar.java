@@ -16,10 +16,9 @@ public abstract class GoogleCalendar extends AsyncTask<Void, Void, Void> {
 
     /**
      * Constructor.
-     * @param activity MainActivity that spawned this task.
      */
-    public GoogleCalendar(MainActivity activity){
-        this.mActivity=activity;
+    public GoogleCalendar(){
+        this.mActivity = IntegrationHack.act;
     }
 
     protected abstract Void doInBackground(Void... params);

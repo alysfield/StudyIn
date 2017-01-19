@@ -16,15 +16,14 @@ public class DeleteEvent extends GoogleCalendar {
 
     /**
      * Constructor.
-     * @param activity MainActivity that spawned this task.
      */
-    public DeleteEvent(MainActivity activity, String eventId) {
-        super(activity);
+    public DeleteEvent(String eventId) {
+        super();
         this.eventId = eventId;
     }
 
-    public DeleteEvent(MainActivity activity, String eventId, String calendarId) {
-        super(activity);
+    public DeleteEvent(String eventId, String calendarId) {
+        super();
         this.setCalendarId(calendarId);
         this.eventId = eventId;
     }

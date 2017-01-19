@@ -23,10 +23,9 @@ public class NewEvent extends GoogleCalendar {
 
     /**
      * Constructor.
-     * @param activity MainActivity that spawned this task.
      */
-    public NewEvent(MainActivity activity){
-        super(activity);
+    public NewEvent(){
+        super();
         event = new Event();
     }
 

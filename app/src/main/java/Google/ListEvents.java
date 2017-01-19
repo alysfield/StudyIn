@@ -22,11 +22,10 @@ public class ListEvents extends GoogleCalendar {
 
     /**
      * Constructor.
-     * @param activity MainActivity that spawned this task.
      * @param  num of events to list
      */
-    public ListEvents(MainActivity activity, int num) {
-        super(activity);
+    public ListEvents(int num) {
+        super();
         listLength = num;
     }
 

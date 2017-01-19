@@ -32,6 +32,7 @@ import com.google.api.services.calendar.CalendarScopes;
 import java.util.Arrays;
 import java.util.List;
 
+import Google.IntegrationHack;
 import Google.ListEvents;
 import Google.NewEvent;
 
@@ -60,6 +61,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Initialize credentials and service object.
+        mStatusText = new TextView(this);
+        mResultsText = new TextView(this);
+        SharedPreferences settings = getPreferences(Context.MODE_PRIVATE);
+        credential = GoogleAccountCredential.usingOAuth2(
+                getApplicationContext(), Arrays.asList(SCOPES))
+                .setBackOff(new ExponentialBackOff())
+                .setSelectedAccountName(settings.getString(PREF_ACCOUNT_NAME, null));
+
+        mService = new com.google.api.services.calendar.Calendar.Builder(
+                transport, jsonFactory, credential)
+                .setApplicationName("Google Calendar API Android Quickstart")
+                .build();
+
+        IntegrationHack.copyMain(this);
 
         Button Resource;
         Resource = (Button) findViewById(R.id.button2);
@@ -94,19 +111,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Initialize credentials and service object.
-        mStatusText = new TextView(this);
-        mResultsText = new TextView(this);
-        SharedPreferences settings = getPreferences(Context.MODE_PRIVATE);
-        credential = GoogleAccountCredential.usingOAuth2(
-                getApplicationContext(), Arrays.asList(SCOPES))
-                .setBackOff(new ExponentialBackOff())
-                .setSelectedAccountName(settings.getString(PREF_ACCOUNT_NAME, null));
 
-        mService = new com.google.api.services.calendar.Calendar.Builder(
-                transport, jsonFactory, credential)
-                .setApplicationName("Google Calendar API Android Quickstart")
-                .build();
     }
 
     /**
@@ -188,14 +193,14 @@ public class MainActivity extends AppCompatActivity {
             if (isDeviceOnline()) {
 
                 for(int i = 0 ; i < 10 ; i++) {
-                    NewEvent event = new NewEvent(this);
-                    event.setName("Swag");
-                    event.startTime(2017, 01, 17 + i, 12, 00);
-                    event.endTime(2017, 01, 17 + 1, 16, 20);
+                    NewEvent event = new NewEvent();
+                    event.setName("Swag " + Integer.toString(i));
+                    event.startTime(2017, 1, 20 + i, 12, 0);
+                    event.endTime(2017, 1, 20 + i, 16, 20);
                     event.execute();
                 }
 
-                new ListEvents(this,10).execute();
+                new ListEvents(10).execute();
 
             } else {
                 mStatusText.setText("No network connection available.");
