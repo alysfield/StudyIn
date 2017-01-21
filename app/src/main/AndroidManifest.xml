@@ -33,6 +33,7 @@
         <activity
             android:name=".SolusLoginActivity"
             android:label="@string/title_activity_solus_login"></activity>
+        <activity android:name=".PreferencesActivity"></activity>
     </application>
 
 </manifest>

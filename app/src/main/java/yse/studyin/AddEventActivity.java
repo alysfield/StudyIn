@@ -3,7 +3,6 @@ package yse.studyin;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +19,7 @@ public class AddEventActivity extends AppCompatActivity {
     int year;
     int month;
     int day;
-    static final int DIALOG_ID = 0;
+    static final int DATE_DIALOG_ID = 0;
 
     // Time Button
     static final int TIME_DIALOG_ID = 1;
@@ -48,14 +47,14 @@ public class AddEventActivity extends AppCompatActivity {
         Date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDialog(DIALOG_ID);
+                showDialog(DATE_DIALOG_ID);
             }
         });
     }
 
     @Override
     protected Dialog onCreateDialog(int ID){
-        if(ID == DIALOG_ID)
+        if(ID == DATE_DIALOG_ID)
             return new DatePickerDialog(this, dateListener, year, month, day);
         if(ID == TIME_DIALOG_ID)
             return new TimePickerDialog(this, timeListener, hour, minute, false);
@@ -101,7 +100,10 @@ public class AddEventActivity extends AppCompatActivity {
                     minute = minuteNum;
 
                     // Change text on button
-                    Time.setText(hour + ":" + minute + " " + AM_PM);
+                    if(minute == 0)
+                        Time.setText(hour + ":" + "00" + " " + AM_PM);
+                    else
+                        Time.setText(hour + ":" + minute + " " + AM_PM);
                 }
             };
 }

@@ -43,4 +43,11 @@
     </string>
     <string name="addEventButton">Add Event</string>
 
+    <string name="title_activity_test">Test</string>
+    <string name="bedtimeTxt">Bedtime:</string>
+    <string name="bedtimeButton">Set Time</string>
+    <string name="wakeTimeButton">Set Time</string>
+    <string name="wakeTimeTxt">Wake Up Time:</string>
+    <string name="setPrefButton">Set Preferences</string>
+
 </resources>
