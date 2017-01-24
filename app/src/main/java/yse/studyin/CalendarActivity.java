@@ -2,6 +2,7 @@ package yse.studyin;
 
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,7 +16,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CalendarView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class CalendarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -51,7 +55,14 @@ public class CalendarActivity extends AppCompatActivity
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int day){
                 month = month + 1; // set January to month 1 instead of month 0
-                Toast.makeText(getApplicationContext(),year + "-" + month + "-" + day, Toast.LENGTH_SHORT).show();
+                String charMonth = charMonth(month);
+
+                String date = charMonth + " " + day + ", " + year;
+
+                Intent intent = new Intent(CalendarActivity.this, TimetableActivity.class);
+
+                intent.putExtra("SELECTED_DATE", date); // pass the date to the timetable activity
+                startActivity(intent);
             }
         });
     }
@@ -101,10 +112,14 @@ public class CalendarActivity extends AppCompatActivity
             Intent intent = new Intent(this, AddEventActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_edit) {
+            // When user wishes to edit an activity they are sent to the Google Calander site
+            Intent googleCalLink = new Intent();
+            googleCalLink.setAction(Intent.ACTION_VIEW);
+            googleCalLink.addCategory(Intent.CATEGORY_BROWSABLE);
+            googleCalLink.setData(Uri.parse("https://www.google.com/calendar"));
+            startActivity(googleCalLink);
 
-        } else if (id == R.id.nav_listAssignments) {
-
-        } else if (id == R.id.preferencesID) {
+        } else if (id == R.id.nav_preferences) {
             Intent intent = new Intent(this, PreferencesActivity.class);
             startActivity(intent);
         }
@@ -112,5 +127,36 @@ public class CalendarActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public String charMonth(int month){
+        String charMonth;
+        if(month == 1)
+            charMonth = "January";
+        else if(month == 2)
+            charMonth = "February";
+        else if(month == 3)
+            charMonth = "March";
+        else if(month == 4)
+            charMonth = "April";
+        else if (month == 5)
+            charMonth = "May";
+        else if (month == 6)
+            charMonth = "June";
+        else if (month == 7)
+            charMonth = "July";
+        else if (month == 8)
+            charMonth = "August";
+        else if (month == 9)
+            charMonth = "September";
+        else if (month == 10)
+            charMonth = "October";
+        else if (month == 11)
+            charMonth = "November";
+        else if (month == 12)
+            charMonth = "December";
+        else
+            charMonth = "Illegal Month";
+        return charMonth;
     }
 }

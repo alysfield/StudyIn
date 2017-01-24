@@ -1,0 +1,1481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_timetable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yse.studyin.TimetableActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/calendarID"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/background"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/calendarID"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@+id/calendarID">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <!-- 12 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_12am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_12am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 12:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1230am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1230am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 1:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 1:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_130am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_130am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 2:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_2am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_2am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 2:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_230am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_230am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 3:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_3am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_3am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 3:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_330am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_330am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 4:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_4am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_4am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 4:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_430am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_430am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 5:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_5am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_5am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 5:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_530am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_530am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 6:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_6am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_6am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 6:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_630am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_630am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 7:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_7am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_7am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 7:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_730am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_730am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 8:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_8am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_8am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 8:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_830am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_830am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 9:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_9am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_9am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 9:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_930am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_930am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 10:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_10am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_10am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 10:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1030am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1030am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 11:00 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_11am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_11am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 11:30 am -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1130am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1130am"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 12:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_12pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_12pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 12:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1230pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1230pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 1:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 1:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_130pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_130pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 2:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_2pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_2pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 2:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_230pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_230pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 3:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_3pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_3pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 3:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_330pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_330pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 4:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_4pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_4pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 4:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_430pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_430pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 5:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_5pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_5pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 5:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_530pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_530pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 6:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_6pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_6pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 6:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_630pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_630pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 7:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_7pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_7pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 7:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_730pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_730pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 8:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_8pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_8pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 8:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_830pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_830pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 9:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_9pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_9pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 9:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_930pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_930pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 10:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_10pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_10pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 10:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1030pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1030pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 11:00 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_11pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_11pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <!-- 11:30 pm -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/time_1130pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+                <View android:layout_width="1dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/set_time_1130pm"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

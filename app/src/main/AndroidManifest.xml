@@ -32,8 +32,9 @@
         <activity android:name=".AddEventActivity" />
         <activity
             android:name=".SolusLoginActivity"
-            android:label="@string/title_activity_solus_login"></activity>
-        <activity android:name=".PreferencesActivity"></activity>
+            android:label="@string/title_activity_solus_login" />
+        <activity android:name=".PreferencesActivity" />
+        <activity android:name=".TimetableActivity"></activity>
     </application>
 
 </manifest>
